@@ -5,6 +5,10 @@ single element effortlessly.
 
 ## Installation ##
 
+`npm install react-native-gifted-touch`
+
+if you use yarn
+
 `yarn add react-native-gifted-touch`
 
 ## Props ##
@@ -23,7 +27,7 @@ The single press handler on the component.
 
 ### onDoublePress(event, gestureState) ###
 
-The single press handler on the component.
+The double press handler on the component.
 
 ### onLongPress(event, gestureState) ###
 
@@ -50,3 +54,11 @@ function Component() {
   );
 }
 ```
+
+## Quirks & Limitations ##
+
+- For this component to work as intended `longPressDelay` should always be greater than `doublePressDelay`.
+- You might notice a slight delay in `ms` before `onSinglePress` is invoked. The delay is exactly
+equal to the value of `doublePressDelay`. This is because the single press event is queued using a
+timeout and is delayed till `doublePressDelay` duration so as to trigger the double press event if
+it receives one.
