@@ -19,7 +19,7 @@ or if you use yarn
 | onDoublePress         | `Function`    | `null`    | false      | Double press handler on the element                                                  |
 | onLongPress           | `Function`    | `null`    | false      | Long press handler on the element                                                    |
 | longPressDelay        | `Number`      | 400       | false      | Delay in `ms` before triggering long press                                           |
-| doublePressDelay      | `Number`      | 700       | false      | Delay in `ms` before triggering double press should be greater than `longPressDelay` |
+| doublePressDelay      | `Number`      | 700       | false      | Delay in `ms` before triggering double press, should always be less than `longPressDelay` |
 
 ### onSinglePress(event, gestureState) ###
 
@@ -57,8 +57,9 @@ function Component() {
 
 ## Quirks & Limitations ##
 
-- For this component to work as intended `longPressDelay` should always be greater than `doublePressDelay`.
+- For this component to work as intended `longPressDelay` should always be greater than
+`doublePressDelay`.
 - You might notice a slight delay in `ms` before `onSinglePress` is invoked. The delay is exactly
 equal to the value of `doublePressDelay`. This is because the single press event is queued using a
-timeout and is delayed till `doublePressDelay` duration so as to trigger the double press event if
-it receives one.
+timeout and is delayed till `doublePressDelay` duration is elapsed, so as to trigger the double
+press event if it receives one.
