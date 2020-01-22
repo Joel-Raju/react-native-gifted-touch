@@ -1,0 +1,39 @@
+{
+  "name": "react-native-gifted-touch",
+  "version": "0.0.1",
+  "author": "Joel Raju",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:joel-raju/react-native-gifted-touch.git"
+  },
+  "homepage": "https://github.com/joel-raju/react-native-gifted-touch#readme",
+  "peerDependencies": {
+    "react-native": ">=0.43.0",
+    "prop-types": ">=15.5.7"
+  },
+  "devDependencies": {
+    "babel-jest": "23.4.2",
+    "babel-preset-react-native": "4.0.0",
+    "jest": "23.5.0",
+    "react": "16.9.0",
+    "react-native": "0.61.5",
+    "react-test-renderer": "16.9.0"
+  },
+  "keywords": [
+    "react-native",
+    "react-component",
+    "ios",
+    "android",
+    "touch",
+    "click",
+    "double click",
+    "double tap",
+    "double press",
+    "long press",
+    "long click",
+    "single press",
+    "single tap",
+    "single click"
+  ]
+}
