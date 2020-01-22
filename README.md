@@ -7,19 +7,19 @@ single element effortlessly.
 
 `npm install react-native-gifted-touch`
 
-if you use yarn
+or if you use yarn
 
 `yarn add react-native-gifted-touch`
 
 ## Props ##
 
-| Attributes            |     Type      |  Default  |  Required  |  Description                                             |
-| :-------------------- | :-----------: | :-------: | :---------:| :------------------------------------------------------: |
-| onSinglePress         | `Function`    | `null`    | false      | Single press handler on the element                      |
-| onDoublePress         | `Function`    | `null`    | false      | Double press handler on the element                      |
-| onLongPress           | `Function`    | `null`    | false      | Long press handler on the element                        |
-| longPressDelay        | `Number`      | 400       | false      | Delay in `ms` before triggering long press               |
-| doublePressDelay      | `Number`      | 700       | false      | Delay in `ms` before triggering double press             |
+| Attributes            |     Type      |  Default  |  Required  |  Description                                                                         |
+| :-------------------- | :-----------: | :-------: | :---------:| :----------------------------------------------------------------------------------: |
+| onSinglePress         | `Function`    | `null`    | false      | Single press handler on the element                                                  |
+| onDoublePress         | `Function`    | `null`    | false      | Double press handler on the element                                                  |
+| onLongPress           | `Function`    | `null`    | false      | Long press handler on the element                                                    |
+| longPressDelay        | `Number`      | 400       | false      | Delay in `ms` before triggering long press                                           |
+| doublePressDelay      | `Number`      | 700       | false      | Delay in `ms` before triggering double press should be greater than `longPressDelay` |
 
 ### onSinglePress(event, gestureState) ###
 
