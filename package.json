@@ -1,8 +1,9 @@
 {
   "name": "react-native-gifted-touch",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "author": "Joel Raju",
   "license": "MIT",
+  "main": "src/GiftedTouch.js",
   "repository": {
     "type": "git",
     "url": "git@github.com:joel-raju/react-native-gifted-touch.git"
