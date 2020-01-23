@@ -18,8 +18,8 @@ or if you use yarn
 | onSinglePress         | `Function`    | `null`    | false      | Single press handler on the element                                                  |
 | onDoublePress         | `Function`    | `null`    | false      | Double press handler on the element                                                  |
 | onLongPress           | `Function`    | `null`    | false      | Long press handler on the element                                                    |
-| longPressDelay        | `Number`      | 400       | false      | Delay in `ms` before triggering long press                                           |
-| doublePressDelay      | `Number`      | 700       | false      | Delay in `ms` before triggering double press, should always be less than `longPressDelay` |
+| longPressDelay        | `Number`      | 700       | false      | Delay in `ms` before triggering long press                                           |
+| doublePressDelay      | `Number`      | 400       | false      | Delay in `ms` before triggering double press, should always be less than `longPressDelay` |
 
 ### onSinglePress(event, gestureState) ###
 
