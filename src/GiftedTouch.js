@@ -1,8 +1,5 @@
-import React, {useEffect, useState, useRef} from 'react';
-import {
-  View,
-  PanResponder,
-} from 'react-native';
+import React, { useEffect, useState, useRef } from 'react';
+import { View, PanResponder } from 'react-native';
 import PropTypes from 'prop-types';
 
 const LONG_PRESS_DELAY = 700;
@@ -14,9 +11,8 @@ const GiftedTouch = ({
   onLongPress,
   children,
   longPressDelay,
-  doublePressDelay 
+  doublePressDelay
 }) => {
-
   const [isMove, setMove] = useState(false);
   const [isTerminated, setTerminated] = useState(false);
 
@@ -27,14 +23,19 @@ const GiftedTouch = ({
   const [singlePressTimer, setSinglePressTimer] = useState(0);
 
   const _longPressDelay = longPressDelay ? longPressDelay : LONG_PRESS_DELAY;
-  const _doublePressDelay = doublePressDelay ? doublePressDelay : DOUBLE_PRESS_DELAY;
+  const _doublePressDelay = doublePressDelay
+    ? doublePressDelay
+    : DOUBLE_PRESS_DELAY;
 
   const touchElement = useRef(null);
 
-  useEffect(() => () => {
-    _cancelLongPressTimer();
-    _cancelSinglePressTimer();
-  }, [touchElement]);
+  useEffect(
+    () => () => {
+      _cancelLongPressTimer();
+      _cancelSinglePressTimer();
+    },
+    [touchElement]
+  );
 
   const _onSinglePress = (event, gestureState) => {
     if (onSinglePress && typeof onSinglePress === 'function') {
@@ -80,7 +81,7 @@ const GiftedTouch = ({
 
   const _handleTap = (event, gestureState) => {
     _cancelSinglePressTimer();
-    
+
     const timeNow = Date.now();
 
     if (lastTap && timeNow - lastTap < _doublePressDelay) {
@@ -88,7 +89,7 @@ const GiftedTouch = ({
     } else {
       setLastTap(timeNow);
 
-      const timeout =  setTimeout(() => {
+      const timeout = setTimeout(() => {
         setLastTap(0);
         _onSinglePress(event, gestureState);
       }, _doublePressDelay);
@@ -99,13 +100,12 @@ const GiftedTouch = ({
   const responder = PanResponder.create({
     onStartShouldSetPanResponder: (evt, gestureState) => true,
     onMoveShouldSetPanResponder: (evt, gestureState) => true,
-  
 
     onPanResponderStart: (event, gestureState) => {
       setMove(false);
       _cancelLongPressTimer();
-      
-      const timeout =  setTimeout(() => {
+
+      const timeout = setTimeout(() => {
         if (!isMove && !isTerminated) {
           setTouchStartTime(Date.now());
         }
@@ -124,9 +124,9 @@ const GiftedTouch = ({
   });
 
   return (
-      <View {...responder.panHandlers} ref={touchElement}>
-        {children}
-      </View>
+    <View {...responder.panHandlers} ref={touchElement}>
+      {children}
+    </View>
   );
 };
 
@@ -136,8 +136,7 @@ GiftedTouch.propTypes = {
   onDoublePress: PropTypes.func,
   onLongPress: PropTypes.func,
   longPressDelay: PropTypes.number,
-  doublePressDelay: PropTypes.number,
-}
-
+  doublePressDelay: PropTypes.number
+};
 
 export default GiftedTouch;
