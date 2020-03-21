@@ -1,6 +1,6 @@
 # react-native-gifted-touch
 
-`GiftedTouch` is a react native component that allows to handle single, double and long presses on a
+`RNGiftedTouch` is a react native component that allows to handle single, double and long presses on a
 single element effortlessly.
 
 ## Installation
@@ -38,11 +38,11 @@ The long press handler on the component.
 ```jsx
 import React from 'react';
 import { Text } from 'react-native';
-import GiftedTouch from 'react-native-gifted-touch';
+import RNGiftedTouch from 'react-native-gifted-touch';
 
 function Component() {
   return (
-    <GiftedTouch
+    <RNGiftedTouch
       onSinglePress={(event, gestureState) =>
         console.log('handle single press')
       }
@@ -54,7 +54,7 @@ function Component() {
       doublePressDelay={500}
     >
       <Text>I'm a touchable...</Text>
-    </GiftedTouch>
+    </RNGiftedTouch>
   );
 }
 ```
