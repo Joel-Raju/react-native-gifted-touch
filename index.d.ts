@@ -1,13 +1,15 @@
 declare module 'react-native-gifted-touch' {
-  import { FunctionComponent, GestureResponderEvent } from 'react';
-
-  export class RNGiftedTouch extends FunctionComponent<IRNGiftedTouchProps> {}
+  import React from 'react';
 
   export interface IRNGiftedTouchProps {
-    onSinglePress: (event: GestureResponderEvent) => void;
-    onDoublePress: (event: GestureResponderEvent) => void;
-    onLongPress: (event: GestureResponderEvent) => void;
+    onSinglePress: (event) => void;
+    onDoublePress: (event) => void;
+    onLongPress: (event) => void;
     longPressDelay: number;
     doublePressDelay: number;
   }
+
+  export default class RNGiftedTouch extends React.Component<
+    IRNGiftedTouchProps
+  > {}
 }
