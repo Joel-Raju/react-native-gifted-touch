@@ -98,10 +98,10 @@ const GiftedTouch = ({
   };
 
   const responder = PanResponder.create({
-    onStartShouldSetPanResponder: (evt, gestureState) => true,
-    onMoveShouldSetPanResponder: (evt, gestureState) => true,
+    onStartShouldSetPanResponder: () => true,
+    onMoveShouldSetPanResponder: () => true,
 
-    onPanResponderStart: (event, gestureState) => {
+    onPanResponderStart: () => {
       setMove(false);
       _cancelLongPressTimer();
 
@@ -118,7 +118,7 @@ const GiftedTouch = ({
       _handlePressOut(event, gestureState);
     },
 
-    onPanResponderTerminate: (event, gestureState) => {
+    onPanResponderTerminate: () => {
       setTerminated(true);
     }
   });
