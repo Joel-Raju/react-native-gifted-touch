@@ -11,28 +11,6 @@ or if you use yarn
 
 `yarn add react-native-gifted-touch`
 
-## Props
-
-| Attributes       |    Type    | Default | Required |                                        Description                                        |
-| :--------------- | :--------: | :-----: | :------: | :---------------------------------------------------------------------------------------: |
-| onSinglePress    | `Function` | `null`  |  false   |                            Single press handler on the element                            |
-| onDoublePress    | `Function` | `null`  |  false   |                            Double press handler on the element                            |
-| onLongPress      | `Function` | `null`  |  false   |                             Long press handler on the element                             |
-| longPressDelay   |  `Number`  |   700   |  false   |                        Delay in `ms` before triggering long press                         |
-| doublePressDelay |  `Number`  |   400   |  false   | Delay in `ms` before triggering double press, should always be less than `longPressDelay` |
-
-### onSinglePress(event, gestureState)
-
-The single press handler on the component.
-
-### onDoublePress(event, gestureState)
-
-The double press handler on the component.
-
-### onLongPress(event, gestureState)
-
-The long press handler on the component.
-
 ## Example
 
 ```jsx
@@ -58,6 +36,28 @@ function Component() {
   );
 }
 ```
+
+## Props
+
+| Attributes       |    Type    | Default | Required |                                        Description                                        |
+| :--------------- | :--------: | :-----: | :------: | :---------------------------------------------------------------------------------------: |
+| onSinglePress    | `Function` | `null`  |  false   |                            Single press handler on the element                            |
+| onDoublePress    | `Function` | `null`  |  false   |                            Double press handler on the element                            |
+| onLongPress      | `Function` | `null`  |  false   |                             Long press handler on the element                             |
+| longPressDelay   |  `Number`  |   700   |  false   |                        Delay in `ms` before triggering long press                         |
+| doublePressDelay |  `Number`  |   400   |  false   | Delay in `ms` before triggering double press, should always be less than `longPressDelay` |
+
+### onSinglePress(event, gestureState)
+
+The single press handler on the component.
+
+### onDoublePress(event, gestureState)
+
+The double press handler on the component.
+
+### onLongPress(event, gestureState)
+
+The long press handler on the component.
 
 ## Quirks & Limitations
 
